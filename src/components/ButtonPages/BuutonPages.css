@@ -1,0 +1,30 @@
+.container_button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container_button button{
+    cursor: pointer;
+    margin-bottom: 30px;
+    margin: 10px 90px;
+    padding: 0.8em;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(255, 128, 255);
+    color: rgb(0, 0, 0);
+}
+
+@media screen and (min-width:280px) and (max-width:430px) {
+    .container_button button{
+        cursor: pointer;
+        margin-bottom: 30px;
+        margin: 10px 40px;
+        padding: 0.8em;
+        border-radius: 10px;
+        border: none;
+        background-color: rgb(255, 128, 255);
+        color: rgb(0, 0, 0);
+    }
+    
+}

@@ -1,0 +1,202 @@
+.container_search{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+   
+  
+}
+
+
+
+.search_section input{
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+   width: 450px;
+   font-size: 13pt;
+   padding: 10px;
+   border: 1px solid;
+   border-radius: 50px;
+
+}
+
+.filters{
+    display: flex;
+    flex-direction: row;
+}
+
+.container_search p{
+    font-size: 14pt;
+    margin-top: 30px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+.filters div{
+   display: flex;
+   background-color: rgb(253, 50, 253);;
+    height: 38px;
+    width: 100px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 30px;
+    font-weight: bold;
+    border: 1px solid white;
+}
+
+.filters div:hover{
+    background-color: rgb(255, 158, 255);
+}
+
+.filters div span{
+    color: rgb(44, 44, 44);
+    margin: auto;
+}
+
+
+@media screen and (min-width:280px) and (max-width:440px){
+    .container_search{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 50px;
+       
+      
+    }
+    
+    
+    
+    .search_section input{
+      background-color: white;
+      align-items: center;
+      justify-content: center;
+       width: 200px;
+       font-size: 12pt;
+       padding: 5px;
+       border: 1px solid;
+       border-radius: 50px;
+    
+    }
+    
+    .filters{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .container_search p{
+        
+        margin-top: 30px;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+    }
+
+    .filters{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+    }
+    
+    .filters div{
+       display: flex;
+       flex-wrap: wrap;
+       background-color: rgb(253, 50, 253);;
+        height: 40px;
+        width: 90px;
+        border-radius: 10px;
+        cursor: pointer;
+        margin: 5px;
+        font-weight: bold;
+        border: 1px solid white;
+    }
+}
+
+@media screen and (min-width:441px) and (max-width:800px){
+    .search_section input{
+        background-color: white;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+        font-size: 12pt;
+        padding: 6px;
+        border: 1px solid;
+        border-radius: 50px;
+      
+      }
+    .filters{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 400px;
+       margin-right: 60px;
+    }
+   
+    .filters div{
+        display: flex;
+        flex-wrap: wrap;
+        background-color: rgb(253, 50, 253);;
+         height: 40px;
+         width: 90px;
+         border-radius: 10px;
+         cursor: pointer;
+         margin: 5px;
+         font-weight: bold;
+         border: 1px solid white;
+    }
+
+     .container_search  p{
+        margin-top: 30px;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        text-align: center;
+    }
+}
+
+@media screen and (min-width:541px) and (max-width:800px){
+    .search_section input{
+        background-color: white;
+        align-items: center;
+        justify-content: center;
+        width: 350px;
+        font-size: 12pt;
+        padding: 7px;
+        border: 1px solid;
+        border-radius: 50px;
+      
+      }
+    .filters{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 500px;
+       margin-right: 60px;
+    }
+   
+    .filters div{
+        display: flex;
+        flex-wrap: wrap;
+        background-color: rgb(253, 50, 253);;
+         height: 40px;
+         width: 90px;
+         border-radius: 10px;
+         cursor: pointer;
+         margin: 9px;
+         font-weight: bold;
+         border: 1px solid white;
+    }
+
+    .container_search  p{
+        width: 300px;
+        font-size: 13pt;
+        margin-top: 30px;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        text-align: center;
+    }
+}
