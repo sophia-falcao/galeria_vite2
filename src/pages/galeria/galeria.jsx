@@ -18,12 +18,11 @@ export function Galeria(){
             <main>
                 
                 {error && <p className={styles.error_msg}>  {error}</p>}
-                
-             
+               
                 <section className={styles.search_container}>
-                <h1>Galeria de Fotos</h1>
+                 <h1>Galeria de Fotos</h1>
                     <Search />
-                </section>
+                 </section>
                 <section className={styles.container_foto}>
                     {fotos.map(foto => (
                         <div key={foto.id}>
