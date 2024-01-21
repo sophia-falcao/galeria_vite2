@@ -1,6 +1,6 @@
-import styles from './galeria.module.css'
+import  './galeria.css'
 
-import { useContext } from 'react'
+import { useContext} from 'react'
 import { ContextFoto } from '../../contextFoto/ContextFoto'
 
 
@@ -10,29 +10,29 @@ import { Search } from '../../components/Search/Search'
 import { ButtonPages } from '../../components/ButtonPages/ButtonPages'
 
 export function Galeria(){
-    const {fotos, fotoAmpliada, error} = useContext(ContextFoto)
+    const {fotos, fotoAmpliada, error, loading, div} = useContext(ContextFoto)
     
+
+
     return(
-        <div className={styles.container_gallery}>
-           
-            <main>
-                
-                {error && <p className={styles.error_msg}>  {error}</p>}
-                
-             
-                <section className={styles.search_container}>
+        <div className='container_gallery'>    
+            <main>             
+                {error && <p className={error_msg}>  {error}</p>}
+                        
+                <section className='search_container'>
                 <h1>Galeria de Fotos</h1>
                     <Search />
                 </section>
-                <section className={styles.container_foto}>
+               { loading ? <p>Carregando...</p> : (
+               <section className='container_foto' ref={div}>
                     {fotos.map(foto => (
                         <div key={foto.id}>
-                            <Fotos foto={foto.urls.small}/>
+                            <Fotos foto={foto.urls.small} />
                         </div>
                     ))}
-                </section>
+                </section> )}
                 
-                <section className={styles.foto_ampliada}>
+                <section className='foto_ampliada'>
                    { fotoAmpliada && <FotoAmpliada /> } 
                 </section>
 

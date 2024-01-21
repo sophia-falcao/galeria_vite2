@@ -5,8 +5,10 @@ import './Search.css'
 
 export function Search(){
     
-    const {searchInput, fetchImages, setPage}= useContext(ContextFoto)
+    const {searchInput, fetchImages, setPage, div}= useContext(ContextFoto)
     
+   
+
     function resetSearch(){
         setPage(1)
         fetchImages()
@@ -14,14 +16,17 @@ export function Search(){
   
     function handleSearch(e){
         e.preventDefault()
+        window.scrollTo({top: 620, behavior: "smooth"  })
         resetSearch()
 
     }
 
 
-    function handleSelection(selection){
+    function handleSelection(selection, elemRef){
         searchInput.current.value = selection
-      resetSearch()
+        window.scrollTo({top: elemRef.current.offsetTop, behavior: "smooth"  })
+        
+        resetSearch()
     }
 
     return(
@@ -34,6 +39,8 @@ export function Search(){
                         className="search_input"
                         ref={searchInput}
                     />
+                
+                   
                 </form>
 
             </section>
@@ -41,10 +48,10 @@ export function Search(){
             <p> Temas mais pesquisados:</p>
             <section className="filters">
 
-                <div  onClick={() => handleSelection('natureza')}> <span> Natureza </span></div>
-                <div onClick={() => handleSelection('decoração')}> <span> Decoração </span></div>
-                <div onClick={() => handleSelection('cachorros')}> <span> Cachorros</span></div>
-                <div onClick={() =>handleSelection('sapatos') }> <span> Sapatos </span> </div>
+                <div  onClick={() => handleSelection('natureza', div)} > <span> Natureza </span></div>
+                <div onClick={() => handleSelection('decoração', div)}> <span> Decoração </span></div>
+                <div onClick={() => handleSelection('cachorros', div)}> <span> Cachorros</span></div>
+                <div onClick={() =>handleSelection('sapatos', div) }> <span> Sapatos </span> </div>
             </section>  
         </div>
 
