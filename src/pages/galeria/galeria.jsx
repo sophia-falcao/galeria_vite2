@@ -15,6 +15,7 @@ export function Galeria(){
 
 
     return(
+<<<<<<< HEAD
         <div className='container_gallery'>    
             <main>             
                 {error && <p className={error_msg}>  {error}</p>}
@@ -25,6 +26,19 @@ export function Galeria(){
                 </section>
                { loading ? <p>Carregando...</p> : (
                <section className='container_foto' ref={div}>
+=======
+        <div className={styles.container_gallery}>
+           
+            <main>
+                
+                {error && <p className={styles.error_msg}>  {error}</p>}
+               
+                <section className={styles.search_container}>
+                 <h1>Galeria de Fotos</h1>
+                    <Search />
+                 </section>
+                <section className={styles.container_foto}>
+>>>>>>> e5103e10aea0c228f588f0ecbd3ad1f43fc7ff1b
                     {fotos.map(foto => (
                         <div key={foto.id}>
                             <Fotos foto={foto.urls.small} />
